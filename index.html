@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0609" />
+  <title>My Soul, My World, and My Everything ♥</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0b0609;
+      color: #fff4f7;
+      overflow-x: hidden;
+    }
+    .display { font-family: 'Playfair Display', serif; }
+    .glow { box-shadow: 0 0 70px rgba(244, 63, 94, .15); }
+    .glass { background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px); }
+    .heart-bg { position: fixed; inset: 0; pointer-events:none; overflow:hidden; z-index:0; }
+    .heart-bg span { position:absolute; bottom:-50px; color:rgba(244,63,94,.16); animation: floatUp linear infinite; }
+    @keyframes floatUp { to { transform: translateY(-115vh) rotate(25deg); opacity:0; } }
+    .fade-in { animation: fade .8s ease both; }
+    @keyframes fade { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:translateY(0) } }
+    .modal { display:none; }
+    .modal.show { display:flex; }
+    .choice-no { transition: transform .18s ease; }
+    .choice-no:hover { transform: rotate(-3deg) scale(1.04); }
+    .sparkle { animation: pulse 1.7s infinite; }
+    @keyframes pulse { 50% { transform:scale(1.12); filter:drop-shadow(0 0 12px #fb7185); } }
+  </style>
+</head>
+<body>
+  <div class="heart-bg" id="heartBg"></div>
+
+  <main class="relative z-10 min-h-screen px-5 py-8 sm:px-8">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-sm font-semibold tracking-wide text-rose-200">
+        <i class="fa-solid fa-heart text-rose-500"></i> a little page for you
+      </a>
+      <button id="surpriseTop" class="glass rounded-full px-4 py-2 text-xs text-rose-100 transition hover:bg-rose-500/15">
+        <i class="fa-solid fa-gift mr-2"></i> Hadiah kecil
+      </button>
+    </nav>
+
+    <section class="mx-auto grid min-h-[82vh] max-w-6xl items-center gap-12 py-16 lg:grid-cols-[1.15fr_.85fr]">
+      <div class="fade-in">
+        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-rose-400/25 bg-rose-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-rose-200">
+          <span class="h-2 w-2 rounded-full bg-rose-400"></span> dibuat dengan sepenuh hati
+        </p>
+        <h1 class="display max-w-3xl text-5xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl">
+          My Soul, My World,<br><span class="text-rose-400">and My Everything.</span>
+        </h1>
+        <p class="mt-7 max-w-xl text-base leading-8 text-rose-100/65 sm:text-lg">
+          Untuk Nabila Rizqy Ramadhani. Ada beberapa hal yang mungkin sederhana,
+          tapi ingin aku sampaikan dengan cara yang sedikit berbeda.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="#message" class="rounded-full bg-rose-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-rose-950/40 transition hover:-translate-y-1 hover:bg-rose-400">
+            Baca pesan kecilku <i class="fa-solid fa-arrow-down ml-2"></i>
+          </a>
+          <button id="openLetter" class="glass rounded-full px-6 py-3.5 text-sm font-semibold text-rose-100 transition hover:-translate-y-1 hover:bg-white/10">
+            <i class="fa-regular fa-envelope mr-2"></i> Buka surat
+          </button>
+        </div>
+        <p class="mt-8 text-xs tracking-wide text-rose-200/40">01 — sebuah halaman kecil, dengan rasa yang besar</p>
+      </div>
+
+      <div class="fade-in mx-auto w-full max-w-md">
+        <div class="glass glow relative overflow-hidden rounded-[2rem] p-7 sm:p-9">
+          <div class="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-rose-500/15 blur-3xl"></div>
+          <div class="relative flex aspect-[4/5] flex-col items-center justify-center rounded-[1.5rem] border border-rose-300/15 bg-gradient-to-br from-rose-950/70 via-[#190b12] to-black p-8 text-center">
+            <div class="sparkle mb-7 text-6xl text-rose-400"><i class="fa-solid fa-heart"></i></div>
+            <p class="text-xs uppercase tracking-[.35em] text-rose-200/60">for someone special</p>
+            <h2 class="display mt-5 text-4xl leading-tight">Nabila,<br>this is for you.</h2>
+            <div class="my-7 h-px w-16 bg-rose-400/60"></div>
+            <p class="max-w-xs text-sm leading-7 text-rose-100/65">Semoga halaman ini bisa menjadi pengingat kecil bahwa kamu dihargai dan disayangi.</p>
+            <button id="heartButton" aria-label="Tekan untuk kejutan" class="mt-8 grid h-14 w-14 place-items-center rounded-full border border-rose-300/30 bg-rose-500/15 text-2xl text-rose-300 transition hover:scale-110 hover:bg-rose-500/30">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+            <span class="mt-3 text-[10px] uppercase tracking-[.2em] text-rose-200/40">tekan ikon hati</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="message" class="mx-auto max-w-4xl scroll-mt-10 py-20">
+      <div class="text-center">
+        <p class="text-xs font-semibold uppercase tracking-[.3em] text-rose-400">a message from me</p>
+        <h2 class="display mt-4 text-4xl leading-tight sm:text-5xl">Terima kasih, dan maaf.</h2>
+        <p class="mt-3 text-sm text-rose-100/45">Untuk perjalanan yang sudah kita lewati.</p>
+      </div>
+      <div class="glass mt-10 rounded-3xl p-7 sm:p-11">
+        <div class="mb-6 text-3xl text-rose-400"><i class="fa-solid fa-quote-left"></i></div>
+        <p class="display text-2xl leading-relaxed text-rose-50 sm:text-3xl">
+          Terima kasih untuk semua cerita, kesabaran, perhatian, dan hal-hal kecil selama tiga tahun ini.
+        </p>
+        <p class="mt-6 leading-8 text-rose-100/65">
+          Aku tahu perjalanan kita tidak selalu sempurna. Ada hari-hari yang menyenangkan,
+          ada juga saat ketika kata-kata dan sikapku mungkin belum seperti yang kamu harapkan.
+          Untuk itu, aku ingin bilang maaf.
+        </p>
+        <p class="mt-4 leading-8 text-rose-100/65">
+          Terima kasih sudah menjadi bagian dari cerita ini. Aku menghargai setiap waktu,
+          tawa, obrolan, dan kesempatan untuk terus belajar menjadi pribadi yang lebih baik.
+          Semoga kita selalu bisa saling mendengarkan, menghormati, dan menjaga satu sama lain.
+        </p>
+        <p class="display mt-8 text-xl italic text-rose-300">— dengan tulus.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-4xl py-16 text-center">
+      <div class="mb-4 text-3xl text-rose-400"><i class="fa-solid fa-heart-circle-check"></i></div>
+      <p class="text-xs font-semibold uppercase tracking-[.3em] text-rose-400">one little question</p>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Kamu sayang aku gak?</h2>
+      <p class="mt-4 text-sm text-rose-100/55">Jawab dengan jujur, ya. Apa pun jawabanmu, tetap sampaikan dengan baik. ♥</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <button id="yesButton" class="rounded-full bg-rose-500 px-9 py-3.5 font-bold text-white shadow-lg shadow-rose-950/50 transition hover:-translate-y-1 hover:bg-rose-400">
+          Iya <i class="fa-solid fa-heart ml-2"></i>
+        </button>
+        <button id="noButton" class="choice-no glass rounded-full px-9 py-3.5 font-semibold text-rose-100">
+          Tidak
+        </button>
+      </div>
+      <p id="answerHint" aria-live="polite" class="mt-5 min-h-6 text-sm text-rose-300"></p>
+    </section>
+
+    <footer class="mx-auto max-w-6xl border-t border-rose-300/10 py-8 text-center text-xs text-rose-100/35">
+      Dibuat dengan hati · My Soul, My World, and My Everything
+    </footer>
+  </main>
+
+  <div id="modal" class="modal fixed inset-0 z-50 items-center justify-center bg-black/75 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="relative w-full max-w-md rounded-3xl border border-rose-300/20 bg-[#170a11] p-8 text-center shadow-2xl shadow-rose-950/40">
+      <button id="closeModal" aria-label="Tutup" class="absolute right-5 top-5 text-rose-100/50 transition hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+      <div id="modalIcon" class="mb-5 text-5xl text-rose-400"><i class="fa-solid fa-heart"></i></div>
+      <h3 id="modalTitle" class="display text-3xl">Satu pesan kecil</h3>
+      <p id="modalText" class="mt-4 leading-7 text-rose-100/70">Kamu adalah bagian berharga dari cerita ini. Terima kasih sudah hadir.</p>
+      <button id="modalOkay" class="mt-7 rounded-full bg-rose-500 px-7 py-3 text-sm font-bold text-white transition hover:bg-rose-400">Awww, oke ♥</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalIcon = document.getElementById('modalIcon');
+
+    function showModal(title, message, icon = 'fa-heart') {
+      modalTitle.textContent = title;
+      modalText.textContent = message;
+      modalIcon.innerHTML = `<i class="fa-solid ${icon}"></i>`;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('modalOkay').addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
+
+    document.getElementById('heartButton').addEventListener('click', () => {
+      showModal('Hey, Nabila! ♥', 'Kalau hari ini terasa berat, semoga kamu ingat bahwa ada banyak hal baik dalam dirimu. Terima kasih sudah menjadi dirimu sendiri.', 'fa-heart');
+      burstHearts();
+    });
+    document.getElementById('surpriseTop').addEventListener('click', () => {
+      showModal('A little surprise!', 'Tidak perlu menunggu hari spesial untuk mengucapkan terima kasih. Hari ini pun layak jadi alasan untuk menghargaimu.', 'fa-gift');
+      burstHearts();
+    });
+    document.getElementById('openLetter').addEventListener('click', () => {
+      showModal('Untuk Nabila', 'Terima kasih kata maafnya selama 3 tahun ini. Aku juga minta maaf untuk hal-hal yang belum bisa kulakukan dengan baik. Semoga kita terus belajar saling memahami.', 'fa-envelope-open-text');
+    });
+
+    document.getElementById('noButton').addEventListener('click', () => {
+      document.getElementById('answerHint').textContent = 'Ihhh kok gituuu 😭 coba pikirin sekali lagi, yaa!';
+      showModal('Yahhh, kok tidak? 🥺', 'Ihhh kok gituuu, harus sayang pokoknyaa! Hehe. Tapi jangan lupa, jawabanmu tetap hak kamu ya ♥', 'fa-face-sad-tear');
+    });
+    document.getElementById('yesButton').addEventListener('click', () => {
+      document.getElementById('answerHint').textContent = 'Yeay! Makasih sudah menjawab ♥';
+      showModal('YEAYYYY! ♥', 'Makasih yaaa! Semoga kita bisa terus saling menghargai, mendukung, dan menciptakan cerita baik bersama.', 'fa-heart');
+      burstHearts(28);
+    });
+
+    function burstHearts(count = 12) {
+      for (let i = 0; i < count; i++) {
+        const heart = document.createElement('span');
+        heart.textContent = ['♥', '♡', '✦'][Math.floor(Math.random() * 3)];
+        heart.style.position = 'fixed';
+        heart.style.left = (10 + Math.random() * 80) + 'vw';
+        heart.style.top = (35 + Math.random() * 35) + 'vh';
+        heart.style.zIndex = '60';
+        heart.style.pointerEvents = 'none';
+        heart.style.color = '#fb7185';
+        heart.style.fontSize = (16 + Math.random() * 24) + 'px';
+        heart.animate([
+          { transform: 'translateY(0) scale(.6)', opacity: 1 },
+          { transform: `translateY(-${100 + Math.random() * 180}px) scale(1.4)`, opacity: 0 }
+        ], { duration: 1100 + Math.random() * 700, easing: 'ease-out' });
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 1900);
+      }
+    }
+
+    // Hiasan hati bergerak di latar belakang.
+    const heartBg = document.getElementById('heartBg');
+    for (let i = 0; i < 18; i++) {
+      const heart = document.createElement('span');
+      heart.textContent = i % 3 === 0 ? '♡' : '♥';
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.fontSize = (12 + Math.random() * 22) + 'px';
+      heart.style.animationDuration = (12 + Math.random() * 16) + 's';
+      heart.style.animationDelay = (-Math.random() * 20) + 's';
+      heartBg.appendChild(heart);
+    }
+  </script>
+</body>
+</html>

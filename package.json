@@ -1,0 +1,12 @@
+{
+  "name": "my-soul-my-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small personal MVP website",
+  "scripts": {
+    "start": "serve -s . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
